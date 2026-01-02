@@ -1,0 +1,98 @@
+
+
+raw_apartaments = [
+    {
+        "id": 1, 
+        "district": "Issyk-Kul", 
+        "price": 40000,   # Пишем просто число для расчетов
+        "area": 65,        # м2
+        "rooms": 4, 
+        "floor": 1,       # Если дома частные, можно ставить 1
+        "year": 2020
+    },
+    {
+        "id": 2, 
+        "district": "Bishkek", 
+        "price": 55000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 3, 
+        "district": "Bishkek", 
+        "price": 10000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 4, 
+        "district": "Bishkek", 
+        "price": 100000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 5, 
+        "district": "Bishkek", 
+        "price": 75000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 6, 
+        "district": "Issyk-Kul", 
+        "price": 35000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 7, 
+        "district": "Bishkek", 
+        "price": 66000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 8, 
+        "district": "Bishkek", 
+        "price": 90000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 9, 
+        "district": "Bishkek", 
+        "price": 72000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    },
+    {
+        "id": 10, 
+        "district": "Issyk-Kul", 
+        "price": 58000, 
+        "area": 42, 
+        "rooms": 2, 
+        "floor": 5, 
+        "year": 2018
+    }
+]
+
+for raw_apartament in raw_apartaments:
+    if raw_apartament['id'] == 5:
+        print(f"{raw_apartament["price"]}")

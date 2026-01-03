@@ -96,3 +96,48 @@ raw_apartaments = [
 for raw_apartament in raw_apartaments:
     if raw_apartament['id'] == 5:
         print(f"{raw_apartament["price"]}")
+
+#////////////////////////////////////////////////////////////////////////////////
+
+def calculate_average_price(list):
+    average_price = []
+    for item in list:
+        if item["price"] > 0:
+            average_price.append(item["price"])
+
+    return sum(average_price) / len(average_price)
+
+all_average = calculate_average_price(raw_apartaments)
+print(f"Средняя цена на рынке: {all_average}")
+
+#////////////////////////////////////////////////////////////////////////////////
+
+def calculate_sq_meter_price(list, id):
+    for item in list:
+        if item["id"] == id:
+            if item["area"] > 0:
+                metr_price = item["price"] / item["area"]
+                return round(metr_price, 2)
+    return "Квартира с таким ID не найдена"
+
+apartments_id = int(input("Enter your home: "))
+
+metr_price = calculate_sq_meter_price(raw_apartaments, apartments_id)
+print(f"Цена за 1м2 для {apartments_id} равна {metr_price}")
+
+#/////////////////////////////////////////////////////////////////////////////////
+
+def list_control(list,id):
+    for item in list:
+        if item["id"] == id:
+            disti = item["district"]
+            metr_price2 = round(item["price"] / item["area"], 2)
+            return metr_price2, disti
+    return None, None       
+
+apartments_id = int(input("Enter your home: "))
+metr_price2, disti = list_control(raw_apartaments,apartments_id)
+if disti:
+    print(f"Район {disti}, цена за метр {metr_price2}")
+else:
+    print("Квартира не найдена!")

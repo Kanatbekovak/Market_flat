@@ -1,4 +1,10 @@
 
+import json
+
+# Превращаем наш обогащенный список в JSON-формат для фронтенда
+json_data = json.dumps(raw_apartaments, ensure_ascii=False, indent=4)
+
+# Теперь эти данные можно "отдать" твоему HTML-макету
 
 raw_apartaments = [
     {
@@ -200,3 +206,5 @@ for item in raw_apartaments:
 
 print(f"Общая прибыль агенства: {total_profit}$")
 # print(raw_apartaments[0])
+
+#/////////////////////////////////////////////////////////////////////////////////

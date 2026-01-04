@@ -141,3 +141,38 @@ if disti:
     print(f"Район {disti}, цена за метр {metr_price2}")
 else:
     print("Квартира не найдена!")
+
+#/////////////////////////////////////////////////////////////////////////////////
+
+def evaluate_investment(list, id, average):
+    for item in list:
+        if item["id"] == id:
+            price_home = item["price"]
+
+            low_border = average * 0.85
+            high_border= average * 1.15
+
+            if price_home <= low_border:
+                status = "Выгодно"
+            elif price_home >= high_border:
+                status = "Дорого"
+            else:
+                status = "Рыночная цена"
+            
+            return status, price_home
+    
+    return None, None
+
+apartments_id = int(input("Enter your home: "))
+status, price = evaluate_investment(raw_apartaments,apartments_id,all_average)
+
+if status:
+    print(f"Квартира №{apartments_id}")
+    print(f"Цена:{price}$")
+    print(f"Статус: {status}")
+else:
+    print("Неправильное введение")
+
+
+
+

@@ -173,6 +173,30 @@ if status:
 else:
     print("Неправильное введение")
 
+for item in raw_apartaments:
+    status_price, price_home = evaluate_investment(raw_apartaments,item["id"],all_average)
+    item["status"] = status_price
 
 
+for item in raw_apartaments:
+    print(f"{item["id"]}, | {item["district"]}, | {item["status"]}")
 
+
+# print(raw_apartaments[0])
+
+#/////////////////////////////////////////////////////////////////////////////////
+
+total_profit = 0 # копилка
+
+for item in raw_apartaments:
+    price_buy = int(item["price"] * 0.8)
+    profit_price = int(item["price"] - price_buy)
+    item["buyout_price"] = price_buy
+    item["profit"] = profit_price
+    total_profit += profit_price
+
+for item in raw_apartaments:
+    print(f"{item["id"]}, | Выкуп $ {item["buyout_price"]}, | прибыль $ {item["profit"]}")
+
+print(f"Общая прибыль агенства: {total_profit}$")
+# print(raw_apartaments[0])

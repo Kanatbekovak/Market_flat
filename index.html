@@ -5,29 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Market</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <div class="container">
-                <a href="index.html">
-                    <div class="logotype">
-                        <img src="./images/Group 257.png" alt="logotype">
+    <section class="header">
+        <header>
+            <div class="container head">
+                <div class="logotype">
+                    <a href="index.html"><img src="./images/Group 257.png" alt="logotype"></a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="menu_list">
+                            <li><a href="./pages/survey.html">Как продать квартиру?</a></li>
+                            <li><a href="./pages/history.html">Истории клиентов</a></li>
+                        </ul>
+                    </nav>
+                    <div class="number">
+                        <img src="./images/Vector.png" alt="phone">
+                        <p class="phone">+ 7 495 835 47 11</p>
                     </div>
-                </a>
-                <ul class="menu">
-                    <li class="menu_link">
-                        <a href="./pages/survey.html">Как продать квартиру?</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="./pages/history.html">Истории клиентов</a>
-                    </li>
-                    <p class="phone"><i class="fa-solid fa-phone"></i>+ 7 495 835 47 11</p>
-                </ul>
+                    <button class="call_me">Перезвоните мне</button>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section class="main">
+        <div class="main_page">
+            <div class="container main_list">
+                <div class="main_text">
+                    <p>Запутались в сложных терминах и документах?</p>
+                    <h1>Узнайте, какие <span>документы</span> подготовить и что учесть 
+                    при <span>продаже и покупке</span> квартиры</h1>
+                    <button class="want_more">Хочу знать больше</button>
+                </div>
+                <div class="floot"><img src="./images/Иллюстрация.png" alt="illustrator"></div>
             </div>
         </div>
-        
-    </div>
+    </section>
+    <section class="sticker">
+        <div class="sticker_page">
+            <div class="container sticker-list">
+                <div class="sticker_one">
+                    <img src="" alt="">
+                    <div class="nervous_sticker">
+                        <p>Какие документы мне нужны для продажи или покупки квартиры?</p>
+                        <img src="./images/Group 268.png" alt="nervous">
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="survey"></section>
+    <section class="footer"></section>
 </body>
 <script src="app.js"></script>
 </html>
